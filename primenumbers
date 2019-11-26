@@ -1,0 +1,28 @@
+#include <iostream>
+#include <math.h> // library added to summon mathematic stuff
+
+using namespace std;
+
+bool isprime(int n) // the function that checks whether a number is prime or not
+{
+    if (n < 2) 
+        return false; // showing the false condition 
+    for (int i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0)
+            return false; // showing the false condition
+    }
+    return true; // if it is not matched the conditions above, return true condition
+}
+
+int main() // main function, to display the result
+{
+    int n;
+    cout << "Enter a number" << " ";
+    cin >> n;
+    if (isprime(n) == true) {
+        cout << n << " is a prime number!";
+    } // if n is a prime number
+    else {
+        cout << n << " is NOT a prime number!";
+    } // if n is NOT a prime number
+}
